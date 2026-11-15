@@ -93,6 +93,11 @@ h1{margin:0;font-weight:700;font-size:36px;line-height:1.1;letter-spacing:-.01em
 .at{color:var(--muted);font-size:14px}
 .dc-status{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
 .dc-status .dot{width:8px;height:8px;border-radius:50%;background:var(--st);flex:none}
+.pf-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.pf-stats a{display:flex;flex-direction:column;padding:10px 12px;border-radius:12px;background:var(--card-2);border:1px solid var(--line);text-decoration:none;transition:border-color .15s}
+.pf-stats a:hover{border-color:var(--faint)}
+.pf-stats b{font-size:20px;line-height:1.2;font-variant-numeric:tabular-nums}
+.pf-stats small{color:var(--muted);font-size:12px}
 
 /* about */
 .socials{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
@@ -228,6 +233,11 @@ footer{max-width:1180px;margin:28px auto 0;color:var(--faint);font-size:13px;tex
         </div>
         <div class="at">@un0yy</div>
         <div class="dc-status"><span class="dot"></span><span id="dc-status-text">Discord status loading…</span></div>
+        <div class="pf-stats">
+          <a href="#github"><b id="pf-repos">6</b><small>GitHub repos</small></a>
+          <a href="#about"><b>9</b><small>Languages</small></a>
+          <a href="#projects"><b>3</b><small>Projects</small></a>
+        </div>
       </div>
     </section>
 
@@ -464,6 +474,7 @@ $('theme').addEventListener('click',function(){
     var f=list.find(function(r){return r.name===FEATURED;});
     if(f&&f.description) $('omni-desc').textContent=f.description;
     $('gh-count').textContent=list.length+' public repos';
+    $('pf-repos').textContent=list.length;
     $('repos').innerHTML=repos.map(function(r){
       return '<li><a class="repo" href="'+esc(r.html_url)+'" target="_blank" rel="noopener">'+
         '<b><svg><use href="#i-repo"/></svg>'+esc(r.name)+'</b>'+
