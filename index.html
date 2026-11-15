@@ -76,47 +76,23 @@ h2 small{font-weight:500;font-size:13px;color:var(--faint);font-family:var(--mon
 
 /* profile */
 .profile{padding:0;overflow:hidden;--st:#80848e}
-.banner{height:140px;position:relative;overflow:hidden;background:#0d0a1a}
-.blob{position:absolute;border-radius:50%;filter:blur(38px);opacity:.85;animation:float 14s ease-in-out infinite alternate}
-.b1{width:260px;height:180px;left:-40px;top:-60px;background:#7c3aed}
-.b2{width:240px;height:170px;right:-30px;top:-40px;background:#3b5bff;animation-delay:-5s}
-.b3{width:200px;height:140px;left:40%;top:40px;background:#c026d3;opacity:.55;animation-delay:-9s}
-@keyframes float{to{transform:translate(30px,18px) scale(1.15)}}
-.banner .mesh{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);
-  background-size:22px 22px;mask-image:linear-gradient(to bottom,#000,transparent 95%);-webkit-mask-image:linear-gradient(to bottom,#000,transparent 95%)}
-.banner .code{position:absolute;right:18px;bottom:12px;font-family:var(--mono);font-size:11.5px;color:rgba(255,255,255,.55);letter-spacing:.04em}
-.banner .code b{color:#c4a3ff;font-weight:500}
-.profile-body{padding:0 24px 24px;margin-top:-56px;display:flex;flex-direction:column;gap:8px;position:relative}
-.avatar-wrap{position:relative;width:112px;height:112px}
-.avatar{width:112px;height:112px;border-radius:50%;padding:5px;background:var(--card);
-  box-shadow:0 0 0 3px var(--st),0 0 26px -2px var(--st);transition:box-shadow .4s}
+.banner{height:110px;background:#000}
+.profile-body{padding:0 24px 24px;margin-top:-48px;display:flex;flex-direction:column;gap:6px;position:relative}
+.avatar-wrap{position:relative;width:96px;height:96px}
+.avatar{width:96px;height:96px;border-radius:50%;padding:4px;background:var(--card)}
 .avatar span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;
-  background:linear-gradient(140deg,#2a1d45,#14162a);font-family:var(--mono);font-weight:700;font-size:30px;color:#f2f2f5}
+  background:linear-gradient(140deg,#2a1d45,#14162a);font-family:var(--mono);font-weight:700;font-size:26px;color:#f2f2f5}
 .avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
-.deco{position:absolute;inset:-10px;width:132px;height:132px;pointer-events:none}
-.avatar-wrap i{position:absolute;right:6px;bottom:8px;width:24px;height:24px;border-radius:50%;background:var(--st);border:5px solid var(--card)}
+.deco{position:absolute;inset:-8px;width:112px;height:112px;pointer-events:none}
+.avatar-wrap i{position:absolute;right:4px;bottom:6px;width:20px;height:20px;border-radius:50%;background:var(--st);border:4px solid var(--card)}
 .name-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:6px}
-h1{margin:0;font-weight:800;font-size:42px;line-height:1.05;letter-spacing:-.03em;
-  background:linear-gradient(90deg,var(--accent),#c49bff 55%,var(--accent-2));background-size:200% 100%;
-  -webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 8s linear infinite}
-@keyframes shine{to{background-position:200% 0}}
-.badges{display:flex;gap:6px}
-.badge{width:28px;height:28px;display:grid;place-items:center;border-radius:8px;background:var(--accent-soft);color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent)}
-.badge svg{width:16px;height:16px}
-.at{color:var(--muted);font-size:14px;font-family:var(--mono)}
-.tagline{margin:2px 0 0;font-family:var(--mono);font-size:13.5px;color:var(--fg)}
-.tagline::before{content:"> ";color:var(--accent)}
-.caret{display:inline-block;width:8px;height:15px;background:var(--accent);vertical-align:-2px;margin-left:3px;animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-.dc-status{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);align-self:flex-start;
-  padding:5px 12px 5px 10px;border-radius:999px;background:var(--card-2);border:1px solid var(--line);max-width:100%}
-.dc-status span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.dc-status .dot{width:8px;height:8px;border-radius:50%;background:var(--st);flex:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--st) 25%,transparent)}
-.pf-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
-.pf-stats a,.pf-stats div{display:flex;flex-direction:column;padding:10px 12px;border-radius:12px;background:var(--card-2);border:1px solid var(--line);text-decoration:none;transition:border-color .15s}
-.pf-stats a:hover{border-color:var(--accent)}
-.pf-stats b{font-size:20px;line-height:1.2;font-variant-numeric:tabular-nums}
-.pf-stats small{color:var(--muted);font-size:12px}
+h1{margin:0;font-weight:700;font-size:36px;line-height:1.1;letter-spacing:-.01em;color:var(--fg)}
+.badges{display:flex;gap:4px;color:var(--muted)}
+.badge{width:22px;height:22px;display:grid;place-items:center}
+.badge svg{width:18px;height:18px}
+.at{color:var(--muted);font-size:14px}
+.dc-status{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.dc-status .dot{width:8px;height:8px;border-radius:50%;background:var(--st);flex:none}
 
 /* about */
 .socials{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
@@ -126,17 +102,15 @@ h1{margin:0;font-weight:800;font-size:42px;line-height:1.05;letter-spacing:-.03e
 .soc:hover{color:var(--fg);border-color:var(--accent);transform:translateY(-1px)}
 .soc svg{width:17px;height:17px;fill:currentColor}
 .hi{margin:0 0 6px;font-size:16px;font-weight:700}
-.hi em{font-style:normal;color:var(--accent)}
+.hi em{font-style:normal}
 .about-text{margin:0;color:var(--muted)}
 hr{border:0;border-top:1px solid var(--line);margin:22px 0}
-.stack{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:10px;margin:0;padding:0;list-style:none}
-.stack li{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;padding:9px 10px;border-radius:12px;
-  background:var(--card-2);border:1px solid var(--line);transition:border-color .15s,transform .15s}
-.stack li:hover{border-color:var(--c);transform:translateY(-2px)}
-.stack .ti{width:32px;height:32px;flex:none;display:grid;place-items:center;border-radius:9px;background:#fff;
-  box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
-.stack .ti img{width:20px;height:20px}
-.stack .ti b{font-family:var(--mono);font-size:10px;color:#333}
+.stack{display:flex;flex-wrap:wrap;gap:10px 18px;margin:0;padding:0;list-style:none}
+.stack li{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--fg)}
+.stack .ti{width:18px;height:18px;flex:none;filter:grayscale(1) brightness(1.6);opacity:.85}
+:root[data-theme="light"] .stack .ti{filter:grayscale(1) brightness(.6)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .stack .ti{filter:grayscale(1) brightness(.6)}}
+.stack b{display:grid;place-items:center;min-width:22px;height:18px;padding:0 4px;border-radius:4px;background:var(--card-2);color:var(--muted);font-family:var(--mono);font-size:9.5px}
 
 /* activity */
 .activity{display:flex;gap:16px;align-items:center;padding:16px 18px;border-radius:14px;background:var(--card-2);border:1px solid var(--line)}
@@ -153,31 +127,20 @@ hr{border:0;border-top:1px solid var(--line);margin:22px 0}
 .bar span{display:block;height:100%;width:0;background:var(--ok)}
 
 /* projects */
-.projects{display:flex;flex-direction:column;gap:12px;margin:0;padding:0;list-style:none}
-.proj{--pc:var(--accent);position:relative;display:flex;align-items:center;gap:16px;padding:16px 18px;border-radius:16px;overflow:hidden;
-  background:linear-gradient(110deg,color-mix(in srgb,var(--pc) 9%,transparent),transparent 55%),var(--card-2);
-  border:1px solid var(--line);color:inherit;text-decoration:none;transition:border-color .2s,transform .2s,box-shadow .2s}
-.proj::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:0 3px 3px 0;background:var(--pc)}
-a.proj:hover{border-color:color-mix(in srgb,var(--pc) 55%,var(--line));transform:translateY(-2px);box-shadow:0 10px 30px -12px color-mix(in srgb,var(--pc) 60%,transparent)}
-.proj.py{--pc:#4b8bff}.proj.web{--pc:#c084fc}.proj.now{--pc:var(--ok)}
-.p-ico{width:52px;height:52px;flex:none;border-radius:14px;display:grid;place-items:center;color:var(--pc);
-  background:color-mix(in srgb,var(--pc) 14%,var(--card));border:1px solid color-mix(in srgb,var(--pc) 30%,transparent)}
-.p-ico svg{width:24px;height:24px}
-.p-ico img{width:26px;height:26px}
-.p-txt{display:flex;flex-direction:column;gap:3px;min-width:0;flex:1}
+.projects{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;list-style:none}
+.proj{display:flex;align-items:center;gap:16px;padding:16px 18px;border-radius:14px;background:var(--card-2);
+  border:1px solid var(--line);color:inherit;text-decoration:none;transition:border-color .15s}
+a.proj:hover{border-color:var(--faint)}
+.p-ico{width:50px;height:50px;flex:none;border-radius:12px;display:grid;place-items:center;
+  background:var(--card);border:1px solid var(--line);font-family:var(--mono);font-weight:500;font-size:15px;color:var(--fg)}
+.p-txt{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
 .p-title{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-weight:700;font-size:16px}
 .p-desc{color:var(--muted);font-size:14px}
-.p-bar{height:4px;border-radius:4px;background:var(--line);margin-top:8px;overflow:hidden;position:relative}
-.p-bar::after{content:"";position:absolute;inset:0;width:40%;border-radius:4px;background:linear-gradient(90deg,transparent,var(--ok),transparent);animation:slide 2.2s ease-in-out infinite}
-@keyframes slide{from{transform:translateX(-100%)}to{transform:translateX(250%)}}
-.tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
-  padding:3px 8px;border-radius:999px;color:var(--pc);border:1px solid color-mix(in srgb,var(--pc) 40%,transparent);background:color-mix(in srgb,var(--pc) 10%,transparent)}
-.tag::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
-.tag.pulse::before{animation:pulse 1.6s ease-out infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 currentColor}100%{box-shadow:0 0 0 6px transparent}}
-.arrow{flex:none;width:34px;height:34px;display:grid;place-items:center;border-radius:10px;color:var(--faint);border:1px solid var(--line);transition:all .2s}
-.arrow svg{width:16px;height:16px}
-a.proj:hover .arrow{color:#fff;background:var(--pc);border-color:var(--pc);transform:translateX(3px)}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:5px;border:1px solid var(--line);color:var(--muted)}
+.tag.soon{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 35%,transparent);background:color-mix(in srgb,var(--ok) 8%,transparent)}
+.arrow{flex:none;color:var(--faint);transition:transform .15s,color .15s}
+.arrow svg{width:18px;height:18px}
+a.proj:hover .arrow{color:var(--fg);transform:translateX(3px)}
 
 /* github */
 .gh-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:20px}
@@ -249,10 +212,7 @@ footer{max-width:1180px;margin:28px auto 0;color:var(--faint);font-size:13px;tex
 <main class="grid" id="top">
   <div class="col">
     <section class="card profile" id="profile" aria-label="Profile">
-      <div class="banner" aria-hidden="true">
-        <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="mesh"></div>
-        <div class="code"><b>$</b> whoami → un0yy</div>
-      </div>
+      <div class="banner" aria-hidden="true"></div>
       <div class="profile-body">
         <div class="avatar-wrap">
           <div class="avatar" id="dc-avatar"><span>u0</span></div>
@@ -261,19 +221,13 @@ footer{max-width:1180px;margin:28px auto 0;color:var(--faint);font-size:13px;tex
         </div>
         <div class="name-row">
           <h1>un0yy</h1>
-          <div class="badges">
-            <span class="badge" title="Developer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg></span>
-            <span class="badge" title="Star"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9Z"/></svg></span>
+          <div class="badges" aria-hidden="true">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg></span>
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9Z"/></svg></span>
           </div>
         </div>
         <div class="at">@un0yy</div>
-        <p class="tagline">Cybersecurity &amp; web developer<span class="caret" aria-hidden="true"></span></p>
         <div class="dc-status"><span class="dot"></span><span id="dc-status-text">Discord status loading…</span></div>
-        <div class="pf-stats">
-          <a href="#github"><b id="pf-repos">5</b><small>GitHub repos</small></a>
-          <a href="#about"><b>9</b><small>Languages</small></a>
-          <a href="#projects"><b>3</b><small>Projects</small></a>
-        </div>
       </div>
     </section>
 
@@ -291,15 +245,15 @@ footer{max-width:1180px;margin:28px auto 0;color:var(--faint);font-size:13px;tex
       <hr>
       <h2>My Techstack</h2>
       <ul class="stack">
-        <li style="--c:#3776ab"><span class="ti"><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/python/python-original.svg" alt="" width="20" height="20" loading="lazy" data-f="py"></span>Python</li>
-        <li style="--c:#e34f26"><span class="ti"><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/html5/html5-original.svg" alt="" width="20" height="20" loading="lazy" data-f="html"></span>HTML</li>
-        <li style="--c:#1572b6"><span class="ti"><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/css3/css3-original.svg" alt="" width="20" height="20" loading="lazy" data-f="css"></span>CSS</li>
-        <li style="--c:#f0c800"><span class="ti"><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/javascript/javascript-original.svg" alt="" width="20" height="20" loading="lazy" data-f="js"></span>JavaScript</li>
-        <li style="--c:#e76f00"><span class="ti"><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/java/java-original.svg" alt="" width="20" height="20" loading="lazy" data-f="java"></span>Java</li>
-        <li style="--c:#9b4f96"><span class="ti"><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/csharp/csharp-original.svg" alt="" width="20" height="20" loading="lazy" data-f="c#"></span>C#</li>
-        <li style="--c:#00599c"><span class="ti"><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/cplusplus/cplusplus-original.svg" alt="" width="20" height="20" loading="lazy" data-f="c++"></span>C++</li>
-        <li style="--c:#5b5bd6"><span class="ti"><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/lua/lua-original.svg" alt="" width="20" height="20" loading="lazy" data-f="lua"></span>Lua</li>
-        <li style="--c:#00758f"><span class="ti"><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/mysql/mysql-original.svg" alt="" width="20" height="20" loading="lazy" data-f="sql"></span>SQL</li>
+        <li><img class="ti" src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/python/python-original.svg" alt="" width="18" height="18" data-f="py">Python</li>
+        <li><img class="ti" src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/html5/html5-original.svg" alt="" width="18" height="18" data-f="html">HTML</li>
+        <li><img class="ti" src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/css3/css3-original.svg" alt="" width="18" height="18" data-f="css">CSS</li>
+        <li><img class="ti" src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/javascript/javascript-original.svg" alt="" width="18" height="18" data-f="js">JavaScript</li>
+        <li><img class="ti" src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/java/java-original.svg" alt="" width="18" height="18" data-f="java">Java</li>
+        <li><img class="ti" src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/csharp/csharp-original.svg" alt="" width="18" height="18" data-f="c#">C#</li>
+        <li><img class="ti" src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/cplusplus/cplusplus-original.svg" alt="" width="18" height="18" data-f="c++">C++</li>
+        <li><img class="ti" src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/lua/lua-original.svg" alt="" width="18" height="18" data-f="lua">Lua</li>
+        <li><img class="ti" src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/mysql/mysql-original.svg" alt="" width="18" height="18" data-f="sql">SQL</li>
       </ul>
     </section>
   </div>
@@ -323,23 +277,22 @@ footer{max-width:1180px;margin:28px auto 0;color:var(--faint);font-size:13px;tex
     <section class="card" aria-labelledby="projects">
       <h2 id="projects">Projects</h2>
       <ul class="projects">
-        <li><div class="proj now">
-          <div class="p-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M3 12h3M18 12h3M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/><circle cx="12" cy="12" r="3"/></svg></div>
-          <div class="p-txt"><div class="p-title">Working right now <span class="tag pulse">soon</span></div>
-          <div class="p-desc">Coding a lot of small things, and a bigger project is coming soon.</div>
-          <div class="p-bar" aria-hidden="true"></div></div>
+        <li><div class="proj">
+          <div class="p-ico" aria-hidden="true">W</div>
+          <div class="p-txt"><div class="p-title">Working right now <span class="tag soon">soon</span></div>
+          <div class="p-desc">Coding a lot of small things, and a bigger project is coming soon.</div></div>
         </div></li>
-        <li><a class="proj py" href="https://github.com/un0yy-sasse?tab=repositories&amp;language=python" target="_blank" rel="noopener">
-          <div class="p-ico" aria-hidden="true"><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/python/python-original.svg" alt="" width="26" height="26" loading="lazy"></div>
+        <li><a class="proj" href="https://github.com/un0yy-sasse?tab=repositories&amp;language=python" target="_blank" rel="noopener">
+          <div class="p-ico" aria-hidden="true">py</div>
           <div class="p-txt"><div class="p-title">Python projects <span class="tag">wip</span></div>
           <div class="p-desc">Small tools and experiments written in Python.</div></div>
-          <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a></li>
-        <li><a class="proj web" href="https://github.com/un0yy-sasse/un0yy" target="_blank" rel="noopener">
-          <div class="p-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></div>
+        <li><a class="proj" href="https://github.com/un0yy-sasse/un0yy" target="_blank" rel="noopener">
+          <div class="p-ico" aria-hidden="true">&lt;/&gt;</div>
           <div class="p-txt"><div class="p-title">This website <span class="tag">live</span></div>
           <div class="p-desc">My personal page, built with HTML and CSS.</div></div>
-          <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a></li>
       </ul>
     </section>
@@ -511,7 +464,6 @@ $('theme').addEventListener('click',function(){
     var f=list.find(function(r){return r.name===FEATURED;});
     if(f&&f.description) $('omni-desc').textContent=f.description;
     $('gh-count').textContent=list.length+' public repos';
-    $('pf-repos').textContent=list.length;
     $('repos').innerHTML=repos.map(function(r){
       return '<li><a class="repo" href="'+esc(r.html_url)+'" target="_blank" rel="noopener">'+
         '<b><svg><use href="#i-repo"/></svg>'+esc(r.name)+'</b>'+
