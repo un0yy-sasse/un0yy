@@ -486,15 +486,24 @@ $('theme').addEventListener('click',function(){
   var cached=null;
   try{cached=JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){}
   render(cached&&cached.data||FALLBACK);
-  if(cached&&Date.now()-cached.t<36e5) return;
-  fetch('https://api.github.com/users/'+USER+'/repos?per_page=100&sort=updated')
-    .then(function(r){if(!r.ok) throw 0;return r.json();})
-    .then(function(data){
-      if(!Array.isArray(data)) return;
-      var slim=data.map(function(r){return {name:r.name,description:r.description,html_url:r.html_url,language:r.language,stargazers_count:r.stargazers_count,updated_at:r.updated_at,fork:r.fork};});
-      render(slim);
-      try{localStorage.setItem(KEY,JSON.stringify({t:Date.now(),data:slim}));}catch(e){}
-    }).catch(function(){});
+  /* Bei jedem Besuch frisch von GitHub laden (neue Repos erscheinen sofort).
+     Der Zwischenspeicher wird nur genutzt, damit die Karten sofort sichtbar sind. */
+  var last=0;
+  function refresh(){
+    if(document.hidden||Date.now()-last<6e4) return;
+    last=Date.now();
+    fetch('https://api.github.com/users/'+USER+'/repos?per_page=100&sort=updated',{cache:'no-store'})
+      .then(function(r){if(!r.ok) throw 0;return r.json();})
+      .then(function(data){
+        if(!Array.isArray(data)) return;
+        var slim=data.map(function(r){return {name:r.name,description:r.description,html_url:r.html_url,language:r.language,stargazers_count:r.stargazers_count,updated_at:r.updated_at,fork:r.fork};});
+        render(slim);
+        try{localStorage.setItem(KEY,JSON.stringify({t:Date.now(),data:slim}));}catch(e){}
+      }).catch(function(){});
+  }
+  refresh();
+  setInterval(refresh,3e5);
+  document.addEventListener('visibilitychange',refresh);
 })();
 </script>
 </body>
